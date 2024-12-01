@@ -1,0 +1,105 @@
+.elemento-com-borda {
+    border: 3px solid #ffcc00;
+    padding: 10px;
+}
+.cascata{
+    background-color: grey;
+}
+#para2{
+    background-color: orange; /*Exemplo de comentário CSS*/
+}
+
+.gradiente {
+    font-weight: bold;
+    font-size: 4rem;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(red,yellow);
+    margin: 20px 30px; /*Forma de declaração abreviada*/
+}
+.text-container {
+    background-color: wheat;
+    color: black;
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid black;
+    
+}
+.titulo-pagina{
+    font-weight: bolder;
+    font-size: auto;
+    background-color: wheat;
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid black;
+}
+.fale-conosco{
+    border: 1px solid black;
+    font-weight: bolder;
+    font-size: auto;
+    width: 960px;
+    margin: 0 auto;
+    padding-block-end: 10px;
+    background-color: lightskyblue;
+
+}
+.footer-rodape{
+    border: 1px black ;
+    font-size: auto;
+    background-color: lightskyblue;
+    padding: 10px;
+
+}
+.Redes-sociais ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Alinha os itens em linha */
+}
+
+.Redes-sociais li {
+    margin-right: 15px; /* Espaço entre os links */
+}
+
+.Redes-sociais a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #000; /* Define a cor dos links */
+}
+
+.Redes-sociais a:hover {
+    color: #0073b1; /* Altera a cor do link ao passar o mouse (exemplo de cor para LinkedIn) */
+}
+/* Estilo básico do menu */
+/* Estilo básico do menu */
+.menu {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    background-color: #333; /* Cor de fundo do menu */
+    display: flex; /* Exibe os itens em linha (horizontal) */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente, caso o menu tenha altura */
+    height: 50px; /* Definindo uma altura para o menu */
+}
+
+.menu li {
+    margin-right: 20px; /* Espaço entre os links */
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove o espaço à direita do último item */
+}
+
+.menu a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto dos links */
+    padding: 10px 20px; /* Espaçamento dentro dos links */
+    display: block; /* Faz com que o link ocupe toda a área do <li> */
+}
+
+.menu a:hover {
+    background-color: #575757; /* Cor de fundo ao passar o mouse sobre o link */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
