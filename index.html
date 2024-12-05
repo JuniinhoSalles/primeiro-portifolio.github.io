@@ -1,6 +1,18 @@
 <DOCTYPE html>
 <html lang="pt-br">
     <head><meta charset=”utf-8”>
+        <script>
+            function carregarConteudo() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'enviar-email.php', true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        document.getElementById('enviar-email.php').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
         <!-- Estilos de fontes/fundo etc-->
         <style>
             @font-face {
@@ -26,7 +38,8 @@
         #Sobre-mim {
             font-family: "Overclock";
         }
-        </style>        
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
         <link rel="stylesheet" href="style.css">
         <title> primeiro Portifólio</title> 
         <div class="titulo-pagina">
