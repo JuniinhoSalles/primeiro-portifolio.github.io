@@ -1,31 +1,33 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Captura os dados do formulário
+    // Coletar dados do formulário
     $nome = $_POST['nome'];
     $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $nascimento = $_POST['nascimento'];
     $mensagem = $_POST['mensagem'];
 
-    // Defina o destinatário do e-mail (seu e-mail)
-    $destinatario = "salles_1a@hotmail.com"; // Substitua pelo seu e-mail
+    // Definir o destinatário do e-mail
+    $para = "salles_1a@hotmail.com"; // Substitua pelo seu e-mail
+    $assunto = "Novo formulário de contato";
 
-    // Defina o assunto do e-mail
-    $assunto = "Mensagem do Fale Conosco de $nome";
-
-    // Criação da mensagem do e-mail
-    $mensagem_email = "Você recebeu uma nova mensagem de $nome ($email):\n\n$mensagem";
+    // Criar o corpo do e-mail
+    $corpo = "Nome: $nome\n";
+    $corpo .= "Email: $email\n";
+    $corpo .= "Telefone: $telefone\n";
+    $corpo .= "Nascimento: $nascimento\n";
+    $corpo .= "Mensagem: $mensagem\n";
 
     // Cabeçalhos do e-mail
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-    // Envia o e-mail
-    if (mail($destinatario, $assunto, $mensagem_email, $headers)) {
-    echo "<h2>Mensagem enviada com sucesso!</h2>";
+    // Enviar o e-mail
+    if (mail($para, $assunto, $corpo, $headers)) {
+        echo "Mensagem enviada com sucesso!";
     } else {
-        echo "<h2>Erro ao enviar a mensagem. Tente novamente mais tarde.</h2>";
+        echo "Falha ao enviar a mensagem.";
     }
-} else {
-    echo "<h2>Método de requisição inválido.</h2>";
 }
 ?>
